@@ -45,21 +45,17 @@ NSString *current;
     NSLog(@"Server did start…");
 }
 - (void)serverDidStop:(PSWebSocketServer *)server {
-    NSLog(@"Server did stop…");
 }
 - (BOOL)server:(PSWebSocketServer *)server acceptWebSocketWithRequest:(NSURLRequest *)request {
-    NSLog(@"Server should accept request: %@", request);
     return YES;
 }
 - (void)server:(PSWebSocketServer *)server webSocket:(PSWebSocket *)webSocket didReceiveMessage:(id)message {
-    NSLog(@"Server websocket did receive message: %@", message);
 		if ((NSString *)message == current) return;
 		current = (NSString *)message;
 		NSData *data = [(NSString *)message dataUsingEncoding:NSUTF8StringEncoding];
 		LMConnectionSendOneWayData(&connection, 0x69, (__bridge CFDataRef)data);
 }
 - (void)server:(PSWebSocketServer *)server webSocketDidOpen:(PSWebSocket *)webSocket {
-    NSLog(@"Server websocket did open");
 		[_sockets addObject:webSocket];
 }
 - (void)server:(PSWebSocketServer *)server webSocket:(PSWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean {
