@@ -77,7 +77,6 @@ CumSyncDelegate *shit;
 
 // handle callback
 void clip_callback(CFMachPortRef port, LMMessage *message, CFIndex size, void *info) {
-	NSLog(@"clip");
 	// Check validity of message
 	if (!LMDataWithSizeIsValidMessage(message, size)) {
 		LMResponseBufferFree((LMResponseBuffer *)message);
