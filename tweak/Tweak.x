@@ -35,7 +35,6 @@ void sendClip(CFRunLoopTimerRef timer, void *info) {
 	if (changeCount == [UIPasteboard generalPasteboard].changeCount) return;
 
 	changeCount = [UIPasteboard generalPasteboard].changeCount;
-	NSLog(@"shit2 %ld", (long) changeCount);
 	NSString *message = [UIPasteboard generalPasteboard].string;
 	if ([message length] == 0) return;
 	NSData *data = [(NSString *)message dataUsingEncoding:NSUTF8StringEncoding];
