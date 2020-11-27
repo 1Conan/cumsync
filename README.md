@@ -2,6 +2,8 @@
 
 An open source clipboard sync for linux/windows/mac + ios devices. Really barebones.
 
+Blame Jimmehh
+
 ## Server configuration
 
 ```bash
