@@ -1,8 +1,20 @@
 # CumSync
 
-An open source clipboard sync for linux/windows/mac + ios devices. Really barebones.
+An open source clipboard sync for linux/windows/mac + ios devices.
+Really barebones. Maybe package the client with a UI using electron. Honestly idrc.
 
 Blame Jimmehh
+
+## Requirements
+
+- node.js
+
+## PC Client Installation
+
+```bash
+cd client
+npm i
+```
 
 ## Server configuration
 
@@ -14,6 +26,5 @@ export SSH_PASSWORD=alpine # change this retard
 export SSH_PRIVATEKEY=/home/conan/.ssh/id_retard
 export SSH_PRIVATEKEY_PASSPHRASE=imaretard
 
-node server
-
+node client
 ```
