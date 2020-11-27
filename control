@@ -1,9 +1,8 @@
 Package: com.1conan.cumsync
 Name: CumSync
-Version: 0.0.1
+Version: 1.0.0
 Architecture: iphoneos-arm
 Description: Clipboard Sync for Linux/Mac/Windows
 Maintainer: 1Conan <tweaks@1conan.com>
 Author: 1Conan <tweaks@1conan.com>
-Section: System
-Tag: role::hacker
+Section: Tweaks
