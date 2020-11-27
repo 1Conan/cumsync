@@ -1,0 +1,9 @@
+Package: com.1conan.cumsync
+Name: CumSync
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome tool of some sort!!
+Maintainer: 1Conan <tweaks@1conan.com>
+Author: 1Conan <tweaks@1conan.com>
+Section: System
+Tag: role::hacker

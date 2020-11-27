@@ -1,0 +1,16 @@
+{
+  "name": "cumsync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clipboardy": "^2.3.0",
+    "node-ssh-forward": "^0.7.2",
+    "ws": "^7.4.0"
+  }
+}
