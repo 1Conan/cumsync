@@ -275,4 +275,3 @@ obj
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,c,c++,objective-c,theos-tweak
 
 server/node_modules/
-start.sh
