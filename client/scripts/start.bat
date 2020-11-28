@@ -10,4 +10,4 @@ SET SSH_PASSWORD=alpine
 :: uncomment this if your ssh key has a passphrase
 :: SET SSH_PRIVATEKEY_PASSPHRASE=imarart
 
-client.exe
+cumsync.exe

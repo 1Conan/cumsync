@@ -12,4 +12,4 @@ export SSH_PASSWORD=alpine
 # uncomment this if your ssh key has a passphrase
 # export SSH_PRIVATEKEY_PASSPHRASE=alpine
 
-./client
+./cumsync

@@ -275,3 +275,7 @@ obj
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,c,c++,objective-c,theos-tweak
 
 server/node_modules/
+*.tgz
+*.zip
+package-lock.json
+pnpm-lock.yaml

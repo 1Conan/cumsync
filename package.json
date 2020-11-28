@@ -2,7 +2,7 @@
   "name": "cumsync",
   "version": "1.0.0",
   "description": "",
-  "main": "index",
+  "main": "client/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
