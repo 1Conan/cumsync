@@ -1,6 +1,6 @@
 Package: com.1conan.cumsync
 Name: CumSync
-Version: 1.0.0-1
+Version: 1.0.0-2
 Architecture: iphoneos-arm
 Depends: openssh
 Description: Clipboard Sync for Linux/Mac/Windows

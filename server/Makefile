@@ -1,4 +1,4 @@
-ARCHS = armv7 arm64
+ARCHS = armv6 armv7 arm64
 include $(THEOS)/makefiles/common.mk
 
 TOOL_NAME = CumSyncDaemon
