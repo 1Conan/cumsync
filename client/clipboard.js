@@ -10,7 +10,7 @@ module.exports = class extends EventEmitter {
 
   async start() {
     this.lastClipboardItem = await this.read();
-    this.interval = setInterval(() => this.poller(), 500);
+    this.interval = setInterval(() => this.poller(), 200);
     this.emit('ready');
   }
 
