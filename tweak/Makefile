@@ -7,7 +7,6 @@ TWEAK_NAME = CumSyncSpringboard
 
 CumSyncSpringboard_FILES = Tweak.x
 CumSyncSpringboard_LIBRARIES = rocketbootstrap
-CumSyncSpringboard_PRIVATE_FRAMEWORKS = Pasteboard
 CumSyncSpringboard_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tweak.mk
