@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "clipboardy": "^2.3.0",
+    "get-port": "^5.1.1",
     "node-ssh-forward": "^0.7.2",
     "ws": "^7.4.0"
   }

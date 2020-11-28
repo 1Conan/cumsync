@@ -1,6 +1,7 @@
 const fs = require('fs')
 const WebSocket = require('ws');
 const { SSHConnection } = require('node-ssh-forward');
+const getPort = require('get-port');
 const Clipboard = require('./clipboard');
 
 let ws = undefined;
@@ -29,11 +30,12 @@ const sshConnection = new SSHConnection({
 })
 
 async function main() {
+  const port = await getPort();
   await sshConnection.forward({
-    fromPort: 6969,
+    fromPort: port,
     toPort: 6969,
   });
-  ws = new WebSocket(`ws://localhost:${6969}`);
+  ws = new WebSocket(`ws://localhost:${port}`);
 
   ws.on('open', () => console.log(`connected to ${process.env.DEVICE_IP}`));
   ws.on('close', () => process.exit());
