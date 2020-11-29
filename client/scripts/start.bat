@@ -11,3 +11,5 @@ SET SSH_PASSWORD=alpine
 :: SET SSH_PRIVATEKEY_PASSPHRASE=imarart
 
 cumsync.exe
+
+pause
