@@ -24,34 +24,6 @@ void clip_callback(CFMachPortRef port, LMMessage *message, CFIndex size, void *i
 	LMResponseBufferFree((LMResponseBuffer *)message);
 }
 
-
-LMConnection connection = {
-	MACH_PORT_NULL,
-	"com.1conan.cumsync.daemon"
-};
-NSInteger changeCount = 0;
-
-void sendClip(CFRunLoopTimerRef timer, void *info) {
-	if (changeCount == [UIPasteboard generalPasteboard].changeCount) return;
-
-	changeCount = [UIPasteboard generalPasteboard].changeCount;
-	NSString *message = [UIPasteboard generalPasteboard].string;
-	if ([message length] == 0) return;
-	NSData *data = [(NSString *)message dataUsingEncoding:NSUTF8StringEncoding];
-	LMConnectionSendOneWayData(&connection, 0x69, (__bridge CFDataRef)data);
-}
-
 %ctor {
 	LMStartService("com.1conan.cumsync.springboard", CFRunLoopGetCurrent(), (CFMachPortCallBack)clip_callback);
-
-	CFRunLoopTimerContext ctx = { 0, NULL, NULL, NULL, NULL };
-	CFRunLoopTimerRef timer = CFRunLoopTimerCreate(
-		kCFAllocatorDefault,
-		CFAbsoluteTimeGetCurrent() + 0.2,
-		0.2,
-		0, 0,
-		sendClip,
-		&ctx
-	);
-	CFRunLoopAddTimer(CFRunLoopGetCurrent(), timer, kCFRunLoopCommonModes);
 }
