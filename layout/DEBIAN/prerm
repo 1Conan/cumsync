@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [[ $1 == remove || $1 == purge ]]; then
     /usr/bin/launchctl unload /Library/LaunchDaemons/com.1conan.cumsync.plist
